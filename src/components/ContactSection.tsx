@@ -3,9 +3,9 @@ import { motion } from "motion/react";
 import { supabase } from "../lib/supabaseClient";
 
 const socials = [
-  { name: "GitHub", url: "https://github.com", icon: "github" },
-  { name: "LinkedIn", url: "https://linkedin.com", icon: "linkedin" },
-  { name: "Twitter", url: "https://twitter.com", icon: "x" },
+  { name: "GitHub", url: "https://github.com/davidjennicson", icon: "github" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/davidjennicson", icon: "linkedin" },
+
 ];
 
 const ContactSection = () => {

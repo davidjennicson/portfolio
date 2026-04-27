@@ -1,0 +1,110 @@
+{
+
+
+  "projects": {
+    "sectionTitle": "FEATURED WORK",
+    "items": [
+      {
+        "id": "nexus-crm",
+        "tags": "FULL-STACK, CRM PLATFORM, OPEN-SOURCE",
+        "title": "Nexus CRM for local Indian vendors",
+        "description": "An open-source CRM system built with Spring Boot backend and React frontend. Features real-time deal management, lead tracking, and responsive Kanban/table views with mobile support. Implements dynamic user-defined fields using JSONB PostgreSQL architecture.",
+        "stats": [
+          { "value": "Spring Boot\nReact", "label": "TECH STACK" },
+          { "value": "Mobile\nResponsive", "label": "DESIGN APPROACH" }
+        ],
+        "image": "https://nexuscrmio.netlify.app/dash.png",
+        "cta": "VIEW PROJECT"
+      },
+      {
+        "id": "kissan-mart",
+        "tags": "BLOCKCHAIN, SUPPLY CHAIN, HYPERLEDGER FABRIC",
+        "title": "KissanMart\nDecentralized Supply Chain",
+        "description": "A Hyperledger Fabric-based agricultural supply chain platform enabling transparent tracking from farm to consumer. Implements smart contract chaincode, crypto material generation, and Docker-based network orchestration for traceability.",
+        "stats": [
+          { "value": "Hyperledger\nFabric", "label": "BLOCKCHAIN PLATFORM" },
+          { "value": "Smart\nContracts", "label": "CORE FEATURE" }
+        ],
+        "image": "/projects/kissan_mart.png",
+        "cta": "VIEW PROJECT"
+      },
+      {
+        "id": "swasthya-net",
+        "tags": "FULL STACK, HEALTH TECH, ENTERPRISE",
+        "title": "SwasthyaNet\nHospital Management System",
+        "description": "End-to-end hospital management platform built with Node.js and React. Combines EHR, billing, CRM, ERP, and user management with seamless coordination across departments like OPD, labs, and pharmacy. Designed for high-volume government hospitals with reliable performance and offline sync support.",
+        "stats": [
+          { "value": "EHR + Billing + ERP", "label": "CORE SYSTEM" },
+          { "value": "Dept-Level\nIntegration", "label": "WORKFLOW" }
+        ],
+        "image": "/projects/swasthya.png",
+        "cta": "VIEW PROJECT"
+      }
+    ]
+  },
+
+  "statements": [
+    "I design for those who",
+    "dare to stand out from",
+    "the ordinary crowd."
+  ],
+
+  "skills": {
+    "title": "Skills & Technologies",
+    "items": [
+      { "name": "React", "slug": "react", "color": "#61DAFB" },
+      { "name": "TypeScript", "slug": "typescript", "color": "#3178C6" },
+      { "name": "JavaScript", "slug": "javascript", "color": "#F7DF1E" },
+      { "name": "Python", "slug": "python", "color": "#3776AB" },
+      { "name": "Java", "slug": "openjdk", "color": "#ED8B00" },
+      { "name": "Node.js", "slug": "nodedotjs", "color": "#339933" },
+      { "name": "Next.js", "slug": "nextdotjs", "color": "#ffffff" },
+      { "name": "Tailwind", "slug": "tailwindcss", "color": "#06B6D4" },
+      { "name": "Three.js", "slug": "threedotjs", "color": "#ffffff" },
+      { "name": "Figma", "slug": "figma", "color": "#F24E1E" },
+      { "name": "Git", "slug": "git", "color": "#F05032" },
+      { "name": "Docker", "slug": "docker", "color": "#2496ED" },
+      { "name": "MongoDB", "slug": "mongodb", "color": "#47A248" },
+      { "name": "PostgreSQL", "slug": "postgresql", "color": "#4169E1" },
+      { "name": "Firebase", "slug": "firebase", "color": "#DD2C00" },
+      { "name": "Redux", "slug": "redux", "color": "#764ABC" },
+      { "name": "Vite", "slug": "vite", "color": "#646CFF" },
+      { "name": "Vercel", "slug": "vercel", "color": "#ffffff" },
+      { "name": "Supabase", "slug": "supabase", "color": "#3ECF8E" },
+      { "name": "Go", "slug": "go", "color": "#007D9C" }
+    ]
+  },
+
+  "experience": {
+    "title": "EDUCATION & EXPERIENCE",
+
+    "subtitle": "Trusted by Enterprise teams",
+    "items": [
+      {
+        "name": "KOTAK MAHINDRA",
+        "sector": "SOFTWARE DEVELOPER INTERN",
+        "logo": "/logos/kotak.svg",
+        "description": "Optimized SQL queries and indexing strategies, improving system performance by 20%. Developed enterprise applications using VB.NET and relational databases following SDLC practices. Collaborated with backend and QA teams for testing, debugging, and deployment."
+      },
+      {
+        "name": "FREELANCE DEVELOPMENT",
+        "sector": "FULL STACK DEVELOPER",
+        "logo": "/logos/react.png",
+        "description": "Built full-stack applications using React, Spring Boot, Flask, and PostgreSQL. Developed REST APIs and integrated frontend interfaces with backend services. Published mobile apps on Google Play Store serving 5K+ users globally."
+      },
+      {
+        "name": "REAL PRODUCT COHORT",
+        "sector": "FULL STACK DEVELOPER",
+        "logo": "/logos/producthunt.png",
+        "description": "Collaborated with remote development team to build production-grade applications. Developed REST APIs and integrated with FastAPI based backend and local LLMs (Ollama and Langchain). Participated in code reviews and deployment processes."
+      },
+      {
+        "name": "FR. CONCEICAO RODRIGUES COLLEGE",
+        "sector": "ENGINEERING EDUCATION",
+        "logo": "/logos/fcrce.png",
+        "description": "B.E. Electronics and Computer Science (2020-2024). CGPA: 7.89. Comprehensive engineering foundation in computer science, algorithms, data structures, and software development principles."
+      }
+    ]
+  }
+}
+

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useParams } from "react-router-dom";
 
 const defaultWords = [
   "Hello", 
@@ -13,14 +14,15 @@ const defaultWords = [
 ];
 
 const Preloader = ({ onComplete }: { onComplete: () => void }) => {
+  const { encodedName: routeEncodedName } = useParams();
   const [index, setIndex] = useState(0);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
   const [words, setWords] = useState(defaultWords);
 
   useEffect(() => {
-    // Check for personalized name in URL params (?n=BASE64)
+    // Check for personalized name in URL params (?n=BASE64) or route params (/hi/:name)
     const params = new URLSearchParams(window.location.search);
-    const encodedName = params.get("n");
+    const encodedName = routeEncodedName || params.get("n");
     
     if (encodedName) {
       try {

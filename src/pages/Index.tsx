@@ -146,7 +146,7 @@ export default function Index() {
                       transition={{ duration: 0.9, ease: [0.19, 1, 0.22, 1], delay: 0.2 }}
                     >
                       <span className="text-primary text-[clamp(2rem,6vw,8rem)] mt-2 md:mt-4 hidden sm:block">•</span>
-                      <span>I AM DAVID</span>
+                      <span>I AM DAVID JENNICSON</span>
                     </motion.span>
                   </DraggableDoodle>
                 </div>

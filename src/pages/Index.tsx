@@ -118,7 +118,7 @@ export default function Index() {
           <section className="relative h-[100svh] w-full flex flex-col justify-end p-6 md:p-12 pb-20 md:pb-32 z-10">
 
             <div className="max-w-[1600px] w-full mx-auto relative">
-              <h1 className="font-display font-medium leading-[0.8] tracking-tighter text-[clamp(4rem,14vw,14rem)] uppercase flex flex-col gap-2 md:gap-4 w-full">
+              <h1 className="font-display font-medium leading-[0.8] tracking-tighter text-[clamp(4rem,10vw,14rem)] uppercase flex flex-col gap-2 md:gap-4 w-full">
 
                 {/* Top Line */}
                 <div className="w-full flex justify-center md:justify-start">
@@ -145,7 +145,7 @@ export default function Index() {
                       animate={{ y: "0%" }}
                       transition={{ duration: 0.9, ease: [0.19, 1, 0.22, 1], delay: 0.2 }}
                     >
-                      <span className="text-primary text-[clamp(2rem,6vw,8rem)] mt-2 md:mt-4 hidden sm:block">•</span>
+                      <span className="text-primary text-4xl mt-2 md:mt-4 hidden sm:block">•</span>
                       <span>I AM DAVID JENNICSON</span>
                     </motion.span>
                   </DraggableDoodle>

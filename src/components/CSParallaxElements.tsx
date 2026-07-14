@@ -24,7 +24,7 @@ const SubtleDataStream = () => {
       {columns.map((col) => (
         <motion.div
           key={col.id}
-          className="absolute top-[-100%] text-white/[0.08] text-[10px] font-mono leading-none text-center w-4 whitespace-pre blur-[1px]"
+          className="absolute top-[-100%] text-foreground/[0.08] text-[10px] font-mono leading-none text-center w-4 whitespace-pre blur-[1px]"
           style={{ left: col.left }}
           animate={{ y: ["0vh", "200vh"] }}
           transition={{
@@ -55,18 +55,18 @@ const ThreadScheduler = () => {
 
   return (
     <div className="flex flex-col gap-3 w-48 opacity-30 mix-blend-screen">
-      <div className="text-[8px] tracking-[0.3em] text-white/40 uppercase mb-2">
+      <div className="text-[8px] tracking-[0.3em] text-muted-foreground uppercase mb-2">
         Thread Allocation
       </div>
       
       {[0, 1, 2].map((threadIdx) => (
-        <div key={threadIdx} className="relative w-full h-[1px] bg-white/10">
-          <div className="absolute left-[-20px] top-[-5px] text-[8px] text-white/30">
+        <div key={threadIdx} className="relative w-full h-[1px] bg-border">
+          <div className="absolute left-[-20px] top-[-5px] text-[8px] text-muted-foreground">
             T{threadIdx}
           </div>
           {/* Thread Execution Block */}
           <motion.div
-            className="absolute top-[-1px] h-[3px] bg-white/60"
+            className="absolute top-[-1px] h-[3px] bg-foreground/60"
             initial={{ width: "0%", left: "0%", opacity: 0.2 }}
             animate={
               activeThread === threadIdx
@@ -80,7 +80,7 @@ const ThreadScheduler = () => {
           />
         </div>
       ))}
-      <div className="mt-2 text-[7px] text-white/20 tracking-widest text-right">
+      <div className="mt-2 text-[7px] text-muted-foreground tracking-widest text-right">
         CTX_SWITCH_ACTIVE
       </div>
     </div>
@@ -102,7 +102,7 @@ const CSParallaxHero = () => {
   const rotateFast = useTransform(scrollYProgress, [0, 1], [0, -90]);
 
   return (
-    <div className="absolute top-0 left-0 w-full h-screen overflow-hidden pointer-events-none select-none z-0 text-white font-mono">
+    <div className="absolute top-0 left-0 w-full h-screen overflow-hidden pointer-events-none select-none z-0 text-foreground font-mono">
       
       {/* 1. Subtle Data Stream Background */}
       <SubtleDataStream />
@@ -112,8 +112,8 @@ const CSParallaxHero = () => {
         className="absolute inset-0 opacity-[0.05]"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(255,255,255,1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)
+            linear-gradient(currentColor 1px, transparent 1px),
+            linear-gradient(90deg, currentColor 1px, transparent 1px)
           `,
           backgroundSize: "60px 60px",
         }}
@@ -132,13 +132,13 @@ const CSParallaxHero = () => {
       {/* 4. TOP LEFT: System Specifications */}
       <motion.div
         style={{ y: yMedium }}
-        className="absolute top-[15%] left-[5%] md:left-[8%] w-64 border-l border-white/10 pl-4 opacity-90"
+        className="absolute top-[15%] left-[5%] md:left-[8%] w-64 border-l border-border pl-4 opacity-90"
       >
         <div className="pb-2 mb-2 flex justify-between items-center">
-          <span className="text-[8px] tracking-[0.2em] text-white/50">ENV_SPEC</span>
-          <span className="w-1 h-1 bg-white/40 rounded-full animate-pulse" />
+          <span className="text-[8px] tracking-[0.2em] text-muted-foreground">ENV_SPEC</span>
+          <span className="w-1 h-1 bg-foreground/40 rounded-full animate-pulse" />
         </div>
-        <ul className="text-[9px] space-y-2 text-white/30 tracking-wider">
+        <ul className="text-[9px] space-y-2 text-muted-foreground tracking-wider">
           <li className="flex justify-between"><span>MEM_ALLOC:</span> <span>DYNAMIC</span></li>
           <li className="flex justify-between"><span>V_TREE:</span> <span>BALANCED</span></li>
           <li className="flex justify-between"><span>LATENCY:</span> <span>12ms</span></li>
@@ -193,19 +193,19 @@ const CSParallaxHero = () => {
         className="absolute bottom-[15%] left-[8%] md:left-[10%] opacity-20 flex flex-col items-start"
       >
         <div className="flex items-end gap-2 mb-1">
-          <div className="w-[1px] h-8 bg-white/20" />
+          <div className="w-[1px] h-8 bg-foreground/20" />
           <div className="text-[8px] tracking-[0.3em] mb-1 uppercase">Heap Space</div>
         </div>
         <div className="flex items-center gap-3">
-          <span className="text-[8px] text-white/40">0x00</span>
-          <div className="w-32 h-[1px] bg-white/10 relative">
+          <span className="text-[8px] text-muted-foreground">0x00</span>
+          <div className="w-32 h-[1px] bg-border relative">
             <motion.div
-              className="absolute top-[-1px] w-1 h-[3px] bg-white/60"
+              className="absolute top-[-1px] w-1 h-[3px] bg-foreground/60"
               animate={{ left: ["0%", "100%", "30%", "80%"] }}
               transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
             />
           </div>
-          <span className="text-[8px] text-white/40">0xFF</span>
+          <span className="text-[8px] text-muted-foreground">0xFF</span>
         </div>
       </motion.div>
 
@@ -221,7 +221,7 @@ const CSParallaxHero = () => {
           <circle cx="35" cy="25" r="2" strokeWidth="0.5" />
           <path d="M 23 12 L 17 23 M 27 12 L 33 23" strokeWidth="0.2" />
         </svg>
-        <div className="absolute top-full mt-2 text-center w-full text-[7px] tracking-widest text-white/40">
+        <div className="absolute top-full mt-2 text-center w-full text-[7px] tracking-widest text-muted-foreground">
           NODE_01
         </div>
       </motion.div>
@@ -229,17 +229,17 @@ const CSParallaxHero = () => {
       {/* 9. BOTTOM RIGHT: Stream Telemetry */}
       <motion.div
         style={{ y: yFast }}
-        className="absolute bottom-[12%] right-[5%] md:right-[8%] border-l border-white/20 pl-4 opacity-20"
+        className="absolute bottom-[12%] right-[5%] md:right-[8%] border-l border-border pl-4 opacity-20"
       >
-        <div className="text-[8px] uppercase tracking-[0.4em] mb-1 text-white/40">
+        <div className="text-[8px] uppercase tracking-[0.4em] mb-1 text-muted-foreground">
           Telemetry
         </div>
-        <div className="text-[10px] tracking-wider font-mono text-white/60">
-          TX: <span className="text-white/30">e3b0c442...</span>
+        <div className="text-[10px] tracking-wider font-mono text-foreground/60">
+          TX: <span className="text-muted-foreground">e3b0c442...</span>
         </div>
-        <div className="w-full h-[1px] bg-white/10 mt-3 overflow-hidden">
+        <div className="w-full h-[1px] bg-border mt-3 overflow-hidden">
           <motion.div
-            className="h-full bg-white/40 w-1/4"
+            className="h-full bg-foreground/40 w-1/4"
             animate={{ x: ["-100%", "400%"] }}
             transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
           />

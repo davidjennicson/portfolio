@@ -42,9 +42,14 @@ const LiveClock = () => {
   });
 
   return (
-    <span className="font-mono text-muted-foreground text-sm tracking-widest uppercase">
-      {location} — {formatted} ({timezone})
-    </span>
+    <div className="flex flex-col items-end">
+      <span className="font-sans text-[10px] text-muted-foreground tracking-wider">
+        {location}
+      </span>
+      <span className="font-mono text-foreground text-sm tracking-widest">
+        {formatted}
+      </span>
+    </div>
   );
 };
 

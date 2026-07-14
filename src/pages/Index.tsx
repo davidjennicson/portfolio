@@ -11,6 +11,7 @@ import CSParallaxElements from "@/components/CSParallaxElements";
 import Preloader from "@/components/Preloader";
 import { AnimatePresence } from "motion/react";
 import DraggableDoodle from "@/components/DraggableDoodle";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Index() {
   const [isLoading, setIsLoading] = useState(true);
@@ -48,35 +49,38 @@ export default function Index() {
           <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-8 md:px-12 flex items-center justify-between pointer-events-none">
 
             {/* Left: Branding */}
-            <div className="pointer-events-auto flex flex-col mix-blend-difference text-white">
-              <span className="font-display text-lg font-bold tracking-tighter leading-none">DAVID J.</span>
+            <div className="pointer-events-auto flex flex-col">
+              <span className="font-display text-lg font-bold tracking-tighter leading-none text-foreground">DAVID J.</span>
               <div className="flex items-center gap-2 mt-1">
                 <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
-                <span className="font-sans text-[9px] text-white/50 tracking-[0.2em] uppercase">Available for work</span>
+                <span className="font-sans text-[9px] text-muted-foreground tracking-[0.2em] uppercase">Available for work</span>
               </div>
             </div>
 
             {/* Center: Floating Pill */}
             <div className="absolute left-1/2 -translate-x-1/2 pointer-events-auto hidden sm:block">
-              <div className="flex items-center gap-1 p-1 bg-background/40 backdrop-blur-md border border-white/10 rounded-full shadow-2xl">
+              <div className="flex items-center gap-1 p-1 bg-card/80 backdrop-blur-md border border-border rounded-full shadow-lg">
                 <a href="#work" className="px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-all duration-300" data-hover="true">Work</a>
                 <a href="#about" className="px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-all duration-300" data-hover="true">About</a>
-                <div className="w-[1px] h-4 bg-white/10 mx-2" />
+                <div className="w-[1px] h-4 bg-border mx-2" />
                 <a href="#contact" className="px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] bg-primary text-white shadow-[0_10px_20px_-5px_rgba(255,79,0,0.4)] hover:shadow-[0_15px_30px_-5px_rgba(255,79,0,0.6)] hover:-translate-y-0.5 transition-all duration-300" data-hover="true">Connect</a>
               </div>
             </div>
 
             {/* Right: Meta Info */}
-            <div className="pointer-events-auto flex items-center gap-8 mix-blend-difference text-white">
+            <div className="pointer-events-auto flex items-center gap-4 md:gap-8">
               <div className="hidden lg:flex flex-col items-end">
-                <span className="font-sans text-[8px] text-white/40 tracking-[0.2em] uppercase mb-1">Local Time</span>
+                <span className="font-sans text-[8px] text-muted-foreground tracking-[0.2em] uppercase mb-1">Local Time</span>
                 <LiveClock />
               </div>
 
+              {/* Theme Toggle */}
+              <ThemeToggle />
+
               {/* Mobile Menu Trigger (Placeholder for now) */}
-              <button className="sm:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 bg-white/10 backdrop-blur-md rounded-full" data-hover="true">
-                <div className="w-5 h-[1px] bg-white" />
-                <div className="w-5 h-[1px] bg-white" />
+              <button className="sm:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 bg-card/80 backdrop-blur-md border border-border rounded-full" data-hover="true">
+                <div className="w-5 h-[1px] bg-foreground" />
+                <div className="w-5 h-[1px] bg-foreground" />
               </button>
             </div>
           </nav>
@@ -86,9 +90,9 @@ export default function Index() {
             {/* Parallax Background Pattern */}
             <motion.div
               style={{ y: backgroundY }}
-              className="absolute inset-0 opacity-[0.03]"
+              className="absolute inset-0 opacity-[0.08] dark:opacity-[0.03]"
             >
-              <div className="w-full h-full" style={{ backgroundImage: "radial-gradient(circle at center, black 1px, transparent 1.5px)", backgroundSize: "32px 32px" }} />
+              <div className="w-full h-full" style={{ backgroundImage: "radial-gradient(circle at center, currentColor 1px, transparent 1.5px)", backgroundSize: "32px 32px" }} />
             </motion.div>
 
             <CSParallaxElements />
@@ -103,7 +107,7 @@ export default function Index() {
           {/* Terminal Prompt Badge */}
           <motion.div
             style={{ y: badgeY }}
-            className="absolute top-[35%] right-[5%] border border-border bg-background/50 backdrop-blur-sm px-4 py-2 rounded-sm pointer-events-none z-10"
+            className="absolute top-[35%] right-[5%] border border-border bg-card/50 backdrop-blur-sm px-4 py-2 rounded-sm pointer-events-none z-10"
           >
             <span className="font-mono text-[10px] md:text-xs tracking-widest text-muted-foreground flex items-center gap-2">
               <span className="text-primary">~</span> ./execute_logic.sh <span className="w-1.5 h-3 bg-foreground/70 animate-pulse" />
